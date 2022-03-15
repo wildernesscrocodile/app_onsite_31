@@ -1,0 +1,10 @@
+
+
+
+deviceName: 1
+platformName: Android
+platformVersion: 8
+appPackage: 1
+appActivity: 1
+automationName: Uiautomator2
+noReset: True

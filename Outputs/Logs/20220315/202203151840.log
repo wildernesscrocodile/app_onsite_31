@@ -1,0 +1,3 @@
+2022-03-15 18:40:23,472-INFO-logger.py-python11_app_test-日志信息:登录页面——登录功能,查找元素: ('id', 'com.huiyi31.signin31:id/hy_login_name')
+2022-03-15 18:40:23,473-ERROR-logger.py-python11_app_test-日志信息:查找元素失败! ! ! 
+2022-03-15 18:40:23,473-ERROR-logger.py-python11_app_test-日志信息:截图失败

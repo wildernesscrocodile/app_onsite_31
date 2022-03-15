@@ -1,0 +1,12 @@
+2022-03-14 11:17:38,355-INFO-logger.py-python11_app_test-日志信息:等待元素('id', 'com.huiyi31.signin31:id/hy_login_name')可见
+2022-03-14 11:17:39,900-INFO-logger.py-python11_app_test-日志信息:等待结束。等待时长为:1秒
+2022-03-14 11:17:39,901-INFO-logger.py-python11_app_test-日志信息:登录页面——登录功能,查找元素: ('id', 'com.huiyi31.signin31:id/hy_login_name')
+2022-03-14 11:17:39,968-INFO-logger.py-python11_app_test-日志信息:登录页面——登录功能:元素：('id', 'com.huiyi31.signin31:id/hy_login_name')输入内容：14311233333
+2022-03-14 11:17:40,565-INFO-logger.py-python11_app_test-日志信息:登录页面——登录功能输入成功:('id', 'com.huiyi31.signin31:id/hy_login_name')
+2022-03-14 11:17:40,566-INFO-logger.py-python11_app_test-日志信息:等待元素('id', 'com.huiyi31.signin31:id/hy_login_pwd')可见
+2022-03-14 11:17:41,223-INFO-logger.py-python11_app_test-日志信息:等待结束。等待时长为:0秒
+2022-03-14 11:17:41,223-INFO-logger.py-python11_app_test-日志信息:登录页面——登录功能,查找元素: ('id', 'com.huiyi31.signin31:id/hy_login_pwd')
+2022-03-14 11:17:41,283-INFO-logger.py-python11_app_test-日志信息:登录页面——登录功能:元素：('id', 'com.huiyi31.signin31:id/hy_login_pwd')输入内容：huiyi@31
+2022-03-14 11:17:41,841-INFO-logger.py-python11_app_test-日志信息:登录页面——登录功能输入成功:('id', 'com.huiyi31.signin31:id/hy_login_pwd')
+2022-03-14 11:17:41,842-INFO-logger.py-python11_app_test-日志信息:登录页面——登录功能,查找元素: ('id', 'com.huiyi31.signin31:id/hy_login_bt')
+2022-03-14 11:17:42,360-INFO-logger.py-python11_app_test-日志信息:登录页面——登录功能点击元素:('id', 'com.huiyi31.signin31:id/hy_login_bt')

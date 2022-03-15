@@ -1,0 +1,3 @@
+2022-03-15 17:58:10,434-INFO-logger.py-python11_app_test-日志信息:等待元素('id', 'com.huiyi31.signin31:id/hy_login_name')可见
+2022-03-15 17:58:10,435-ERROR-logger.py-python11_app_test-日志信息:等待元素可见失败!!!
+2022-03-15 17:58:10,436-ERROR-logger.py-python11_app_test-日志信息:截图失败

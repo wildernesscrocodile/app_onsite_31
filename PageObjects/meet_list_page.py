@@ -8,8 +8,6 @@
 
 from Common.basepage import BasePage
 from appium.webdriver.common.appiumby import AppiumBy as ABY
-from selenium.webdriver.support.wait import WebDriverWait
-
 
 
 class MeetList_page(BasePage):
@@ -19,19 +17,12 @@ class MeetList_page(BasePage):
 
     def get_loginStats(self):
         # 获取当前登录状态，已登录为True,未登录为False
+        doc = '判断是否登录成功'
         try:
-            BasePage(self).wait_eleVisible((ABY.ID, 'com.huiyi31.signin31:id/hy_liebiao_people'))
-            return False
-        except:
+            BasePage(self.driver).wait_eleVisible((ABY.ID, 'com.huiyi31.signin31:id/hy_liebiao_people'), doc=doc)
             return True
-
-    # def get_loginStats(self):
-    #     doc = '判断是否登录成功'
-    #     try:
-    #         self.wait_eleVisible(((ABY.ID, 'com.huiyi31.signin31:id/hy_liebiao_people')), doc=doc)
-    #         return False
-    #     except:
-    #         return True
+        except:
+            return False
 
 
 if __name__ == '__main__':

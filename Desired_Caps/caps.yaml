@@ -1,10 +1,10 @@
-
-
-
-deviceName: 1
+deviceName: NFT10-BWFE-8L09575
 platformName: Android
 platformVersion: 8
-appPackage: 1
-appActivity: 1
+appPackage: com.huiyi31.signin31
+appActivity: com.huiyi31.signin31.activity.BootActivity
 automationName: Uiautomator2
 noReset: True
+unicodeKeyboard: True
+resetKeyboard: True
+autoGrantPermissions: True

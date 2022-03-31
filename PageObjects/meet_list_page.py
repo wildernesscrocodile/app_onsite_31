@@ -7,22 +7,23 @@
 # @Software: PyCharm
 
 from Common.basepage import BasePage
-from appium.webdriver.common.appiumby import AppiumBy as ABY
-
+from PageLocators.meet_list_locators import MeetListLocator as loc
 
 class MeetList_page(BasePage):
-
-    # def __init__(self, driver):
-    #     self.driver = driver
 
     def get_loginStats(self):
         # 获取当前登录状态，已登录为True,未登录为False
         doc = '判断是否登录成功'
         try:
-            BasePage(self.driver).wait_eleVisible((ABY.ID, 'com.huiyi31.signin31:id/hy_liebiao_people'), doc=doc)
+            self.wait_eleVisible(loc.user_information_avatar_button, doc=doc)
             return True
         except:
             return False
+
+    def click_avatar(self):
+        doc = '点击头像'
+        self.wait_eleVisible(loc.user_information_avatar_button, doc=doc)
+        self.click_element(loc.user_information_avatar_button, doc)
 
 
 if __name__ == '__main__':

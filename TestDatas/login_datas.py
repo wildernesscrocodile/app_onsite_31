@@ -5,7 +5,7 @@
 # @Author    :麻花
 
 # 正常场景 - 测试数据
-success_data = {"user": "14311233333", "passwd": "huiyi@31"}
+success_data = {"user": "14311233337", "passwd": "huiyi@31"}
 
 # 异常场景 - 用户被锁定、不存在的用户名
 phone_data = [

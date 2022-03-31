@@ -11,7 +11,7 @@ from appium import webdriver
 from PageObjects.login_page import LoginPage
 from TestDatas import login_datas as LD
 from PageObjects.meet_list_page import MeetList_page
-import ddt
+
 import pytest
 from Common.logger import MyLog
 
@@ -19,7 +19,7 @@ from Common.logger import MyLog
 
 my_logger = MyLog()
 
-@ddt.ddt
+@pytest.mark.usefixtures("start_app")
 class TestLogin:
 
     # def setup_class(self):
@@ -48,9 +48,9 @@ class TestLogin:
 
     #   正常用例一登陆成功
     @pytest.mark.smoke
-    def test_login_2_success(self):
-        LoginPage(self.driver).login(LD.success_data["user"], LD.success_data["passwd"])
-        assert MeetList_page(self.driver).get_loginStats()
+    def test_login_2_success(self, start_app):
+        LoginPage(start_app).login(LD.success_data["user"], LD.success_data["passwd"])
+        assert MeetList_page(start_app).get_loginStats()
 
 
 if __name__ == '__main__':

@@ -21,9 +21,8 @@ class CommBus(BasePage):
     # 处理APP重置后授予权限
     def do_jurisdiction(self):
         time.sleep(2)
-        jurisdiction_curAct = self.driver.current_activity
-        my_logger.info(F"jurisdiction_curAct:{jurisdiction_curAct}")
-        if jurisdiction_curAct.find("ReviewPermissionsActivity"):
+        curAct = self.driver.current_activity
+        if curAct.find("ReviewPermissionsActivity") != -1:
             # 点击继续
             self.wait_eleVisible(loc.continue_but)
             self.click_element(loc.continue_but)
@@ -34,7 +33,7 @@ class CommBus(BasePage):
         # 如果没有找到首页的元素或者当前在BootActivity,那么就是在欢迎页面
         curAct = self.driver.current_activity
         my_logger.info(F"curAct:{curAct}")
-        if curAct.find("BootActivity"):
+        if curAct.find("BootActivity") != -1:
             # 点击同意权限
             self.wait_eleVisible(loc.consent_and_authorization_button)
             self.click_element(loc.consent_and_authorization_button)

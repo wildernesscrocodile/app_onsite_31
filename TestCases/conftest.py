@@ -22,9 +22,9 @@ from PageObjects.personal_center_page import PersonalCenterPage
 #
 
 @pytest.fixture
-def start_app():
-
-    driver = baseDriver()
+def start_app(request):
+    param = request.param
+    driver = baseDriver(noReset=param["noReset"])
     # 授予权限
     CommBus(driver).do_jurisdiction()
     # 处理欢迎页面

@@ -25,6 +25,19 @@ class MeetList_page(BasePage):
         self.wait_eleVisible(loc.user_information_avatar_button, doc=doc)
         self.click_element(loc.user_information_avatar_button, doc)
 
+    def search_conference(self, conferencename):
+        doc = '搜索会议'
+        # 点击列表搜索按钮
+        self.wait_eleVisible(loc.list_search_button, doc=doc)
+        self.click_element(loc.list_search_button, doc)
+        # 输入 1
+        self.wait_eleVisible(loc.search_textbox, doc=doc)
+        self.input_text(loc.search_textbox, conferencename, doc)
+        # 点击搜索
+        self.wait_eleVisible(loc.search_button, doc=doc)
+        self.click_element(loc.search_button, doc)
+
+
 
 if __name__ == '__main__':
     from PageObjects import login_page

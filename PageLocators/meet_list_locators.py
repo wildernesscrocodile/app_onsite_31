@@ -16,3 +16,15 @@ class MeetListLocator:
 
     #   用户信息头像按钮
     user_information_avatar_button = (ABY.ID, 'com.huiyi31.signin31.debug:id/hy_liebiao_people')
+
+    #   列表页搜索按钮
+    list_search_button = (ABY.ID, 'com.huiyi31.signin31.debug:id/hy_liebiao_search')
+
+    #   搜索文本框
+    search_textbox = (ABY.ID, 'com.huiyi31.signin31.debug:id/hy_et_search')
+
+    #   搜索结果页搜索按钮
+    search_button = (ABY.ID, 'com.huiyi31.signin31.debug:id/hy_search_btn')
+
+    # 搜索会议结果页的会议名称
+    search_page_conferencename = (ABY.ANDROID_UIAUTOMATOR, 'new UiSelector().text("礼智信")')

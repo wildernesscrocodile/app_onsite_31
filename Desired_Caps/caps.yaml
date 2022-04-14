@@ -1,10 +1,22 @@
-deviceName: NFT10-BWFE-8L09575
-platformName: Android
-platformVersion: '8'
-appPackage: com.huiyi31.signin31.debug
-appActivity: com.huiyi31.signin31.activity.BootActivity
-automationName: Uiautomator2
-noReset: False
-unicodeKeyboard: True
-resetKeyboard: True
-autoGrantPermissions: True
+UAT:
+  deviceName: NFT10-BWFE-8L09575
+  platformName: Android
+  platformVersion: '8'
+  appPackage: com.huiyi31.signin31.debug
+  appActivity: com.huiyi31.signin31.activity.BootActivity
+  automationName: Uiautomator2
+  noReset: False
+  unicodeKeyboard: True
+  resetKeyboard: True
+  autoGrantPermissions: True
+PRO:
+  deviceName: NFT10-BWFE-8L09575
+  platformName: Android
+  platformVersion: '8'
+  appPackage: com.huiyi31.signin31
+  appActivity: com.huiyi31.signin31.activity.BootActivity
+  automationName: Uiautomator2
+  noReset: False
+  unicodeKeyboard: True
+  resetKeyboard: True
+  autoGrantPermissions: True

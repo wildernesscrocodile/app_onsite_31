@@ -11,8 +11,12 @@
 # ---
 
 from appium.webdriver.common.appiumby import AppiumBy as ABY
+from Common.commons import *
+
 
 class WelcomeLocator:
+
+    appPackag = get_appPackage()
 
     # 授予权限页面——继续按钮
     continue_but = (ABY.ID, 'com.android.packageinstaller:id/continue_button')

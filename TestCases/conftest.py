@@ -14,12 +14,14 @@ from appium import webdriver
 from PageObjects.Comm_Bus import CommBus
 from PageObjects.meet_list_page import MeetList_page
 from PageObjects.personal_center_page import PersonalCenterPage
+from Common.commons import env
 
 
 
 #
 #
 #
+
 
 @pytest.fixture
 def start_app(request):
@@ -39,10 +41,14 @@ def start_app(request):
     yield driver
 
 
-def baseDriver(server_port=4723, noReset=None, automationName=None, **kwargs):
+def baseDriver(server_port=4723, deviceName=None, noReset=None, automationName=None):
     fs = open(caps_dir + "/caps.yaml")
-    desired_caps = yaml.safe_load(fs)
+    caps = yaml.safe_load(fs)
 
+    desired_caps = caps[env]
+
+    if deviceName is not None:
+        desired_caps["deviceName"] = deviceName
     if noReset is not None:
         desired_caps["noReset"] = noReset
     if automationName is not None:

@@ -8,7 +8,6 @@
 
 from PageLocators.login_locators import LoginLocator as loc
 from Common.basepage import BasePage
-from appium import webdriver
 
 
 class LoginPage(BasePage):

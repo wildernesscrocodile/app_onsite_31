@@ -12,6 +12,7 @@ from PageObjects.meet_list_page import MeetList_page
 
 import pytest
 from Common.logger import MyLog
+from Common.commons import env
 
 
 my_logger = MyLog()
@@ -23,7 +24,7 @@ class TestLogin:
     @pytest.mark.smoke
     @pytest.mark.parametrize("start_app", [{"noReset": "False"}], indirect=True)
     def test_login_success(self, start_app):
-        LoginPage(start_app).login(LD.success_data["user"], LD.success_data["passwd"])
+        LoginPage(start_app).login(LD.success_data[env]["user"], LD.success_data[env]["passwd"])
         assert MeetList_page(start_app).get_loginStats()
 
 

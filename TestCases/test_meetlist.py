@@ -17,6 +17,7 @@ from PageObjects.meet_list_page import MeetList_page
 from Common.logger import MyLog
 from PageLocators.meet_list_locators import MeetListLocator as loc
 from Common.basepage import BasePage
+from Common.commons import env
 
 
 import pytest
@@ -31,7 +32,7 @@ class TestMeetlist:
     #   搜索会议
     @pytest.mark.parametrize("start_app", [{"noReset": "True"}], indirect=True)
     def test_search_conference(self, start_app):
-        LoginPage(start_app).login(LD.success_data["user"], LD.success_data["passwd"])
+        LoginPage(start_app).login(LD.success_data[env]["user"], LD.success_data[env]["passwd"])
         MeetList_page(start_app).search_conference(MD.conference_data["conferenceName"])
 
         assert BasePage(start_app).is_eleExist(loc.search_page_conferencename)

@@ -11,9 +11,11 @@
 # ---
 
 from appium.webdriver.common.appiumby import AppiumBy as ABY
+from Common.commons import *
 
 class PersonalCenter_locatorsLocator:
 
+    appPackag = get_appPackage()
     #   退出登录按钮
     logout_button = (ABY.ANDROID_UIAUTOMATOR, 'new UiSelector().text("退出登录")')
 

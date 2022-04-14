@@ -7,9 +7,12 @@
 # @Software: PyCharm
 
 from appium.webdriver.common.appiumby import AppiumBy as ABY
+from Common.commons import *
 
 class LoginLocator:
-    name_text = (ABY.ID, 'com.huiyi31.signin31.debug:id/hy_login_name')
-    pwd_text = (ABY.ID, 'com.huiyi31.signin31.debug:id/hy_login_pwd')
-    login_but = (ABY.ID, 'com.huiyi31.signin31.debug:id/hy_login_bt')
+    appPackag = get_appPackage()
+
+    name_text = (ABY.ID, f'{appPackag}:id/hy_login_name')
+    pwd_text = (ABY.ID, f'{appPackag}:id/hy_login_pwd')
+    login_but = (ABY.ID, f'{appPackag}:id/hy_login_bt')
 
